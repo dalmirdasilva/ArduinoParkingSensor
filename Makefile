@@ -6,8 +6,8 @@ LIBRARIES = -lpthread
 SOURCES = \
   ./main.cpp \
   ./ArduinoParkingSensor.cpp \
-  ./EventListener.cpp \
-  ./EventNotifier.cpp \
+  ./TransitionListener.cpp \
+  ./TransitionNotifier.cpp \
   ./Arduino.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
