@@ -7,7 +7,8 @@ SOURCES = \
   ./main.cpp \
   ./ArduinoParkingSensor.cpp \
   ./EventListener.cpp \
-  ./EventNotifier.cpp
+  ./EventNotifier.cpp \
+  ./Arduino.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)
 MAIN = parking

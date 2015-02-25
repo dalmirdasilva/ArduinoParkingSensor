@@ -1,29 +1,29 @@
-
 #include <EventNotifier.h>
 
-EventListener *EventNotifier::listeners[MAX_LISTENERS] = {};
+EventListener *EventNotifier::listeners[MAX_EVENTS][MAX_LISTENERS] = {};
 
-void EventNotifier::addEventListener(EventListener *listener) {
-    if (index < MAX_LISTENERS - 1) {
-        listeners[index++] = listener;
+EventNotifier::EventNotifier() {
+  unsigned char i, j;
+  for (i = 0; i < MAX_EVENTS; i++) {
+    for (j = 0; j < MAX_LISTENERS; j++) {
+      listeners[i][j] = 0;
     }
+  }
 }
 
-void EventNotifier::removeEventListener(EventListener *listener) {
-    unsigned char i, found = 0;
-    for (i = 0; i < MAX_LISTENERS; i++) {
-        if (found == 0) {
-            if (listeners[i] == listener) {
-                found = 1;
-            }
-        } else {
-            listeners[i] = i == MAX_LISTENERS - 1 ? listener[i + 1];
-        }
+void EventNotifier::addEventListener(unsigned char event, EventListener *listener) {
+  unsigned char i;
+  for (i = 0; i < MAX_LISTENERS; i++) {
+    if (listeners[event][i] != 0) {
+      listeners[event][i] = listener;
+      return;
     }
+  }
 }
 
 void EventNotifier::notify(unsigned char event) {
-    for (i = 0; i < index; i++) {
-        listeners[i].eventReceived(event);
-    }
+  unsigned char i;
+  for (i = 0; i < i; i++) {
+    listeners[event][i]->eventReceived();
+  }
 }
