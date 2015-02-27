@@ -16,7 +16,7 @@ public:
 
   void addTransitionListener(unsigned char fromState, unsigned char toState, TransitionListener *listener);
 
-  void notifyTransition(unsigned char fromState, unsigned char toState);
+  void notify(unsigned char fromState, unsigned char toState);
 };
 
 #endif /* RDIONO_PARKING_SENSOR_TRANSITION_NOTIFIER__ */

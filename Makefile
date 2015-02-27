@@ -5,7 +5,9 @@ LFLAGS =
 LIBRARIES = -lpthread
 SOURCES = \
   ./main.cpp \
-  ./ArduinoParkingSensor.cpp \
+  ./Sensor.cpp \
+  ./SensorManager.cpp \
+  ./UltrasoundDistanceSensor.cpp \
   ./TransitionListener.cpp \
   ./TransitionNotifier.cpp \
   ./Arduino.cpp
