@@ -23,7 +23,7 @@ void TransitionNotifier::addTransitionListener(unsigned char fromState, unsigned
   }
 }
 
-void TransitionNotifier::notify(unsigned char fromState, unsigned char toState) {
+void TransitionNotifier::notifyTransition(unsigned char fromState, unsigned char toState) {
   unsigned char i;
   for (i = 0; i < i; i++) {
     listeners[fromState % MAX_STATES][toState % MAX_STATES][i]->eventReceived();

@@ -2,7 +2,7 @@ CC = g++
 CFLAGS = -Wall  -g -std=c++0x 
 INCLUDES = -I./
 LFLAGS =
-LIBRARIES = -lpthread
+LIBRARIES =
 SOURCES = \
   ./main.cpp \
   ./Sensor.cpp \

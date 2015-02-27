@@ -13,10 +13,12 @@ public:
   };
 
   enum SensorEvent {
-    BECOME_ABSENT = 0x00,
-    BECOME_PRESENT = 0x01
+    PASS_BY = 0x00,
+    TURN_UP = 0x01
   };
 
+  float minDistance;
+  float maxDistance;
   float threshold;
   float lastDistance;
   DistanceSensor *sensor;
@@ -24,7 +26,7 @@ public:
 
 public:
 
-  Sensor(DistanceSensor *sensor, float threshold);
+  Sensor(DistanceSensor *sensor, float minDistance, float maxDistance, float threshold);
 
   bool hasTransitioned();
 

@@ -1,19 +1,24 @@
 #include <Sensor.h>
+#include <stdio.h>
 
-Sensor::Sensor(DistanceSensor *sensor, float threshold) : threshold(threshold), sensor(sensor) {
+Sensor::Sensor(DistanceSensor *sensor, float minDistance, float maxDistance, float threshold) :
+    minDistance(minDistance), maxDistance(maxDistance), threshold(threshold), sensor(sensor) {
   lastDistance = 0.0;
   currentState = ABSENT;
 }
 
 bool Sensor::hasTransitioned() {
   float distance;
-  bool has;
+  bool has = false;
   SensorState state;
+  printf("%p\n", sensor);
   distance = sensor->getDistance();
-  state = (distance > threshold) ? ABSENT : PRESENT;
-  has = currentState != state;
-  lastDistance = distance;
-  currentState = state;
+  if (distance >= minDistance && distance <= maxDistance) {
+    state = ((distance - minDistance) > threshold) ? ABSENT : PRESENT;
+    has = currentState != state;
+    lastDistance = distance;
+    currentState = state;
+  }
   return has;
 }
 

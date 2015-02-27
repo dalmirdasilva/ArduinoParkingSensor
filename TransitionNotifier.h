@@ -14,7 +14,7 @@ public:
 
   void addTransitionListener(unsigned char fromState, unsigned char toState, TransitionListener *listener);
 
-  void notify(unsigned char fromState, unsigned char toState);
+  void notifyTransition(unsigned char fromState, unsigned char toState);
 };
 
 #endif /* ARDUINO_PARKING_SENSOR_TRANSITION_NOTIFIER__ */

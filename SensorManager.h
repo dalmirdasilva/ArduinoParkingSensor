@@ -24,7 +24,9 @@ public:
     UNDEFINED = 0xff
   };
 
-  SensorManager(Sensor **sensors, unsigned char *stateTable);
+  SensorManager(Sensor **sensors, unsigned char *stateTable, unsigned char initialState);
+
+  unsigned char computeNextState(unsigned char sensorIndex, unsigned char sensorEvent);
 
   void start();
 };
