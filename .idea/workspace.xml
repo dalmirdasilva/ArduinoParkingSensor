@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7fc88473-5e3f-4bc7-85a8-a17ae4ce71aa" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Settings.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Arduino.h" afterPath="$PROJECT_DIR$/Arduino.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sensor.cpp" afterPath="$PROJECT_DIR$/Sensor.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sensor.h" afterPath="$PROJECT_DIR$/Sensor.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SensorManager.cpp" afterPath="$PROJECT_DIR$/SensorManager.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SensorManager.h" afterPath="$PROJECT_DIR$/SensorManager.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TransitionListener.h" afterPath="$PROJECT_DIR$/TransitionListener.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TransitionNotifier.h" afterPath="$PROJECT_DIR$/TransitionNotifier.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -37,8 +35,8 @@
       <file leaf-file-name="Sensor.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sensor.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -87,8 +85,8 @@
       <file leaf-file-name="SensorManager.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/SensorManager.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.5254238" vertical-offset="0" max-vertical-offset="450">
-              <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+            <state vertical-scroll-proportion="-5.1864405" vertical-offset="108" max-vertical-offset="666">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -104,31 +102,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SensorManager.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Sensor.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sensor.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+              <caret line="15" column="22" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SensorManager.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/SensorManager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
-              <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.60504204" vertical-offset="0" max-vertical-offset="666">
+              <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arduino.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Arduino.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6101695" vertical-offset="0" max-vertical-offset="342">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7579832" vertical-offset="647" max-vertical-offset="1332">
-              <caret line="61" column="39" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="39" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044">
+              <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -155,18 +153,18 @@
         <option value="$PROJECT_DIR$/UltrasoundSensor.cpp" />
         <option value="$PROJECT_DIR$/UltrasoundSensor.h" />
         <option value="$PROJECT_DIR$/Makefile" />
-        <option value="$PROJECT_DIR$/Sensor.cpp" />
         <option value="$PROJECT_DIR$/Arduino.cpp" />
-        <option value="$PROJECT_DIR$/SensorManager.cpp" />
         <option value="$PROJECT_DIR$/UltrasoundDistanceSensor.cpp" />
         <option value="$PROJECT_DIR$/Arduino.h" />
-        <option value="$PROJECT_DIR$/Sensor.h" />
         <option value="$PROJECT_DIR$/TransitionListener.h" />
         <option value="$PROJECT_DIR$/DistanceSensor.h" />
         <option value="$PROJECT_DIR$/TransitionNotifier.h" />
-        <option value="$PROJECT_DIR$/SensorManager.h" />
         <option value="$PROJECT_DIR$/Settings.h" />
+        <option value="$PROJECT_DIR$/Sensor.h" />
+        <option value="$PROJECT_DIR$/Sensor.cpp" />
+        <option value="$PROJECT_DIR$/SensorManager.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/SensorManager.cpp" />
       </list>
     </option>
   </component>
@@ -515,12 +513,12 @@
       <workItem from="1424907819783" duration="38000" />
       <workItem from="1424907963388" duration="1710000" />
       <workItem from="1424961478924" duration="10342000" />
-      <workItem from="1425007349245" duration="1626000" />
+      <workItem from="1425007349245" duration="3428000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27176000" />
+    <option name="totallyTimeSpent" value="28978000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="49" y="200" width="1317" height="772" extended-state="6" />
@@ -884,14 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sensor.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
-          <caret line="14" column="25" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Arduino.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.6101695" vertical-offset="0" max-vertical-offset="342">
@@ -916,34 +906,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SensorManager.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5254238" vertical-offset="0" max-vertical-offset="450">
-          <caret line="5" column="21" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SensorManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Settings.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="252">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sensor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -964,10 +930,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Sensor.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+          <caret line="15" column="22" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7579832" vertical-offset="647" max-vertical-offset="1332">
-          <caret line="61" column="39" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1044">
+          <caret line="46" column="70" selection-start-line="46" selection-start-column="70" selection-end-line="46" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sensor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="702">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SensorManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.1864405" vertical-offset="108" max-vertical-offset="666">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SensorManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.60504204" vertical-offset="0" max-vertical-offset="666">
+          <caret line="20" column="77" selection-start-line="20" selection-start-column="77" selection-end-line="20" selection-end-column="77" />
           <folding />
         </state>
       </provider>

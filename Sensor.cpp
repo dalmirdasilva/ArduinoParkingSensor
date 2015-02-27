@@ -17,6 +17,6 @@ bool Sensor::hasTransitioned() {
   return has;
 }
 
-unsigned char Sensor::getCurrentState() {
+unsigned char Sensor::getState() {
   return (unsigned char) currentState;
 }

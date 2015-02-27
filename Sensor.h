@@ -12,6 +12,11 @@ public:
     PRESENT = 0x01
   };
 
+  enum SensorEvent {
+    BECOME_ABSENT = 0x00,
+    BECOME_PRESENT = 0x01
+  };
+
   float threshold;
   float lastDistance;
   DistanceSensor *sensor;
@@ -23,7 +28,7 @@ public:
 
   bool hasTransitioned();
 
-  unsigned char getCurrentState();
+  unsigned char getState();
 };
 
 #endif /* __ARDUINO_PARKING_SENSOR_SENSOR_H__ */
