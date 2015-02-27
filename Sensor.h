@@ -1,5 +1,5 @@
-#ifndef __ARDIONO_PARKING_SENSOR_SENSOR_H__
-#define __ARDIONO_PARKING_SENSOR_SENSOR_H__ 1
+#ifndef __ARDUINO_PARKING_SENSOR_SENSOR_H__
+#define __ARDUINO_PARKING_SENSOR_SENSOR_H__ 1
 
 #include <DistanceSensor.h>
 
@@ -26,4 +26,4 @@ public:
   unsigned char getCurrentState();
 };
 
-#endif /* __ARDIONO_PARKING_SENSOR_SENSOR_H__ */
+#endif /* __ARDUINO_PARKING_SENSOR_SENSOR_H__ */

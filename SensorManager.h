@@ -1,12 +1,9 @@
-#ifndef __ARDIONO_PARKING_SENSOR_SENSOR_MANAGER_H__
-#define __ARDIONO_PARKING_SENSOR_SENSOR_MANAGER_H__ 1
+#ifndef __ARDUINO_PARKING_SENSOR_SENSOR_MANAGER_H__
+#define __ARDUINO_PARKING_SENSOR_SENSOR_MANAGER_H__ 1
 
 #include <TransitionNotifier.h>
 #include <Sensor.h>
-
-#define MAX_SENSORS 4
-#define MAX_EVENTS 2
-#define MAX_SEMSOR_STATES 6
+#include <Settings.h>
 
 class SensorManager : public TransitionNotifier {
 
@@ -20,4 +17,4 @@ public:
   void start();
 };
 
-#endif /* __ARDIONO_PARKING_SENSOR_SENSOR_MANAGER_H__  */
+#endif /* __ARDUINO_PARKING_SENSOR_SENSOR_MANAGER_H__  */

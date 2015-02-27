@@ -1,10 +1,8 @@
-#ifndef __ARDIONO_PARKING_SENSOR_TRANSITION_NOTIFIER__
-#define __ARDIONO_PARKING_SENSOR_TRANSITION_NOTIFIER__ 1
+#ifndef __ARDUINO_PARKING_SENSOR_TRANSITION_NOTIFIER__
+#define __ARDUINO_PARKING_SENSOR_TRANSITION_NOTIFIER__ 1
 
 #include <TransitionListener.h>
-
-#define MAX_STATES 8
-#define MAX_LISTENERS 4
+#include <Settings.h>
 
 class TransitionNotifier {
     
@@ -19,4 +17,4 @@ public:
   void notify(unsigned char fromState, unsigned char toState);
 };
 
-#endif /* RDIONO_PARKING_SENSOR_TRANSITION_NOTIFIER__ */
+#endif /* ARDUINO_PARKING_SENSOR_TRANSITION_NOTIFIER__ */
