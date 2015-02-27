@@ -1,1 +1,1 @@
-/home/dalmir/storage/ArduinoDistanceDriver/DistanceSensor/DistanceSensor.h
+/home/dalmir/storage/microcontroller/arduino/driver/sensor/distance/DistanceSensor/DistanceSensor.h

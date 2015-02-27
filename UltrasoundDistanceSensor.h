@@ -1,1 +1,1 @@
-/home/dalmir/storage/ArduinoDistanceDriver/UltrasoundDistanceSensor/UltrasoundDistanceSensor.h
+/home/dalmir/storage/microcontroller/arduino/driver/sensor/distance/UltrasoundDistanceSensor/UltrasoundDistanceSensor.h
