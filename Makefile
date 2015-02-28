@@ -6,10 +6,10 @@ LIBRARIES =
 SOURCES = \
   ./main.cpp \
   ./Sensor.cpp \
-  ./SensorManager.cpp \
+  ./StateMachine.cpp \
   ./UltrasoundDistanceSensor.cpp \
-  ./TransitionListener.cpp \
-  ./TransitionNotifier.cpp \
+  ./StateTransitionListener.cpp \
+  ./StateTransitionNotifier.cpp \
   ./Arduino.cpp
 
 OBJECTS = $(SOURCES:.cpp=.o)

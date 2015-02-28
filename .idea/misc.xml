@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_6" assert-keyword="true" jdk-15="true" />
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
+  <component name="CppTools.Loader" reportImplicitCastToBool="false" reportNameReferencedOnce="false" warnedAboutFileOutOfSourceRoot="true" version="3" currentProject="$PROJECT_DIR$/Makefile" compilerSelect="AUTO" />
+  <component name="IdProvider" IDEtalkID="6ECD0298502B8B937C64CB6412C3A047" />
+  <component name="ProjectRootManager" version="2" />
 </project>
-

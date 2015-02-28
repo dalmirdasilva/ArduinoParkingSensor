@@ -7,7 +7,7 @@ class Sensor {
 
 public:
 
-  enum SensorState {
+  enum State {
     ABSENT = 0x00,
     PRESENT = 0x01
   };
@@ -22,7 +22,7 @@ public:
   float threshold;
   float lastDistance;
   DistanceSensor *sensor;
-  SensorState currentState;
+  State currentState;
 
 public:
 

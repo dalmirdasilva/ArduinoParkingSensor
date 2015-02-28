@@ -1,10 +1,11 @@
-#include <UltrasoundDistanceSensor.h>
-#include <TransitionListener.h>
-#include <SensorManager.h>
-#include <Sensor.h>
 #include <stdio.h>
+#include "StateTransitionListener.h"
+#include "Settings.h"
+#include "Sensor.h"
+#include "StateMachine.h"
+#include "UltrasoundDistanceSensor.h"
 
-class LeaveHandler : public TransitionListener {
+class LeaveHandler : public StateTransitionListener {
 
 public:
   virtual void eventReceived() {
@@ -12,7 +13,7 @@ public:
   }
 };
 
-class ArriveHandler : public TransitionListener {
+class ArriveHandler : public StateTransitionListener {
 
 public:
   virtual void eventReceived() {
@@ -27,7 +28,7 @@ int main(int argc, char* argv[]) {
 
   Sensor *sensors[MAX_SENSORS];
 
-  unsigned char stateTable[MAX_SENSORS][MAX_EVENTS][MAX_STATES] = {SensorManager::UNDEFINED};
+  unsigned char stateTable[MAX_SENSORS][MAX_EVENTS][MAX_STATES] = {StateMachine::State::UNDEFINED};
 
   UltrasoundDistanceSensor distanceSensor0(0, 1);
   UltrasoundDistanceSensor distanceSensor1(0, 2);
@@ -38,30 +39,30 @@ int main(int argc, char* argv[]) {
   sensors[0] = &sensor0;
   sensors[1] = &sensor1;
 
-  stateTable[0][Sensor::SensorState::PRESENT][SensorManager::IDLE] = SensorManager::ARRIVE0;
-  stateTable[0][Sensor::SensorState::PRESENT][SensorManager::LEAVE0] = SensorManager::LEAVE1;
-  stateTable[0][Sensor::SensorState::PRESENT][SensorManager::ARRIVE2] = SensorManager::ARRIVE1;
+  stateTable[0][Sensor::State::PRESENT][StateMachine::State::IDLE] = StateMachine::State::ARRIVE0;
+  stateTable[0][Sensor::State::PRESENT][StateMachine::State::LEAVE0] = StateMachine::State::LEAVE1;
+  stateTable[0][Sensor::State::PRESENT][StateMachine::State::ARRIVE2] = StateMachine::State::ARRIVE1;
 
-  stateTable[0][Sensor::SensorState::ABSENT][SensorManager::ARRIVE0] = SensorManager::IDLE;
-  stateTable[0][Sensor::SensorState::ABSENT][SensorManager::ARRIVE1] = SensorManager::ARRIVE2;
-  stateTable[0][Sensor::SensorState::ABSENT][SensorManager::LEAVE1] = SensorManager::LEAVE0;
-  stateTable[0][Sensor::SensorState::ABSENT][SensorManager::LEAVE2] = SensorManager::IDLE;
+  stateTable[0][Sensor::State::ABSENT][StateMachine::State::ARRIVE0] = StateMachine::State::IDLE;
+  stateTable[0][Sensor::State::ABSENT][StateMachine::State::ARRIVE1] = StateMachine::State::ARRIVE2;
+  stateTable[0][Sensor::State::ABSENT][StateMachine::State::LEAVE1] = StateMachine::State::LEAVE0;
+  stateTable[0][Sensor::State::ABSENT][StateMachine::State::LEAVE2] = StateMachine::State::IDLE;
 
-  stateTable[1][Sensor::SensorState::PRESENT][SensorManager::IDLE] = SensorManager::LEAVE0;
-  stateTable[1][Sensor::SensorState::PRESENT][SensorManager::ARRIVE0] = SensorManager::ARRIVE1;
-  stateTable[1][Sensor::SensorState::PRESENT][SensorManager::LEAVE2] = SensorManager::LEAVE1;
+  stateTable[1][Sensor::State::PRESENT][StateMachine::State::IDLE] = StateMachine::State::LEAVE0;
+  stateTable[1][Sensor::State::PRESENT][StateMachine::State::ARRIVE0] = StateMachine::State::ARRIVE1;
+  stateTable[1][Sensor::State::PRESENT][StateMachine::State::LEAVE2] = StateMachine::State::LEAVE1;
 
-  stateTable[1][Sensor::SensorState::ABSENT][SensorManager::LEAVE0] = SensorManager::IDLE;
-  stateTable[1][Sensor::SensorState::ABSENT][SensorManager::ARRIVE1] = SensorManager::ARRIVE0;
-  stateTable[1][Sensor::SensorState::ABSENT][SensorManager::ARRIVE2] = SensorManager::IDLE;
-  stateTable[1][Sensor::SensorState::ABSENT][SensorManager::LEAVE1] = SensorManager::LEAVE2;
+  stateTable[1][Sensor::State::ABSENT][StateMachine::State::LEAVE0] = StateMachine::State::IDLE;
+  stateTable[1][Sensor::State::ABSENT][StateMachine::State::ARRIVE1] = StateMachine::State::ARRIVE0;
+  stateTable[1][Sensor::State::ABSENT][StateMachine::State::ARRIVE2] = StateMachine::State::IDLE;
+  stateTable[1][Sensor::State::ABSENT][StateMachine::State::LEAVE1] = StateMachine::State::LEAVE2;
 
-  SensorManager manager(&sensors[0], &stateTable[0][0][0], SensorManager::IDLE);
+  StateMachine stateMachine(&sensors[0], &stateTable[0][0][0], StateMachine::State::IDLE);
 
-  manager.addTransitionListener(SensorManager::ARRIVE2, SensorManager::IDLE, (TransitionListener *)&arriveHandler);
-  manager.addTransitionListener(SensorManager::LEAVE2, SensorManager::IDLE, (TransitionListener *)&leaveHandler);
+  stateMachine.addStateTransitionListener(StateMachine::State::ARRIVE2, StateMachine::State::IDLE, (StateTransitionListener *)&arriveHandler);
+  stateMachine.addStateTransitionListener(StateMachine::State::LEAVE2, StateMachine::State::IDLE, (StateTransitionListener *)&leaveHandler);
 
-  manager.start();
+  stateMachine.start();
 
   return 0;
 }

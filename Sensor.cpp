@@ -1,5 +1,6 @@
-#include <Sensor.h>
 #include <stdio.h>
+#include "Sensor.h"
+#include "DistanceSensor.h"
 
 Sensor::Sensor(DistanceSensor *sensor, float minDistance, float maxDistance, float threshold) :
     minDistance(minDistance), maxDistance(maxDistance), threshold(threshold), sensor(sensor) {
@@ -10,7 +11,7 @@ Sensor::Sensor(DistanceSensor *sensor, float minDistance, float maxDistance, flo
 bool Sensor::hasTransitioned() {
   float distance;
   bool has = false;
-  SensorState state;
+  State state;
   printf("%p\n", sensor);
   distance = sensor->getDistance();
   if (distance >= minDistance && distance <= maxDistance) {
