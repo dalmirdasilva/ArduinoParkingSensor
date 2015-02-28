@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include "Sensor.h"
-#include "DistanceSensor.h"
 
-Sensor::Sensor(DistanceSensor *sensor, float minDistance, float maxDistance, float threshold) :
-    minDistance(minDistance), maxDistance(maxDistance), threshold(threshold), sensor(sensor) {
-  lastDistance = 0.0;
+Sensor::Sensor(UltrasoundDistanceSensor *sensor, float threshold, float maxDistance) :
+        sensor(sensor), threshold(threshold), minDistance(minDistance) {
   currentState = ABSENT;
 }
 
@@ -14,12 +12,9 @@ bool Sensor::hasTransitioned() {
   State state;
   printf("%p\n", sensor);
   distance = sensor->getDistance();
-  if (distance >= minDistance && distance <= maxDistance) {
-    state = ((distance - minDistance) > threshold) ? ABSENT : PRESENT;
+    state = ((distance ) > threshold) ? ABSENT : PRESENT;
     has = currentState != state;
-    lastDistance = distance;
     currentState = state;
-  }
   return has;
 }
 

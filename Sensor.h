@@ -1,7 +1,7 @@
 #ifndef __ARDUINO_PARKING_SENSOR_SENSOR_H__
 #define __ARDUINO_PARKING_SENSOR_SENSOR_H__ 1
 
-#include <DistanceSensor.h>
+#include "UltrasoundDistanceSensor.h"
 
 class Sensor {
 
@@ -17,16 +17,14 @@ public:
     TURN_UP = 0x01
   };
 
-  float minDistance;
-  float maxDistance;
   float threshold;
-  float lastDistance;
-  DistanceSensor *sensor;
+  float minDistance;
+  UltrasoundDistanceSensor *sensor;
   State currentState;
 
 public:
 
-  Sensor(DistanceSensor *sensor, float minDistance, float maxDistance, float threshold);
+  Sensor(UltrasoundDistanceSensor *sensor, float threshold, float minDistance);
 
   bool hasTransitioned();
 

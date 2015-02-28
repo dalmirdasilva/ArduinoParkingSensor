@@ -3,7 +3,6 @@
 #include "Settings.h"
 #include "Sensor.h"
 #include "StateMachine.h"
-#include "UltrasoundDistanceSensor.h"
 
 class LeaveHandler : public StateTransitionListener {
 
@@ -33,8 +32,8 @@ int main(int argc, char* argv[]) {
   UltrasoundDistanceSensor distanceSensor0(0, 1);
   UltrasoundDistanceSensor distanceSensor1(0, 2);
 
-  Sensor sensor0(&distanceSensor0, 0.0f, 4.0f, 2.0f);
-  Sensor sensor1(&distanceSensor1, 0.0f, 4.0f, 2.0f);
+  Sensor sensor0(&distanceSensor0, 2.0f, 0.0f);
+  Sensor sensor1(&distanceSensor1, 2.0f, 0.0f);
 
   sensors[0] = &sensor0;
   sensors[1] = &sensor1;

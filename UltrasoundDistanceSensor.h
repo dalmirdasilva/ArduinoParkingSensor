@@ -76,7 +76,7 @@ public:
      * 
      * @retun   The distance in centimeters.
      */
-    virtual float getDistance();
+    float getDistance();
 };
 
 #endif /* __ARDUINO_DRIVER_ULTRASOUND_DISTANCE_SENSOR_H__ */

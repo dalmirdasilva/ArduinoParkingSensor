@@ -12,7 +12,6 @@
 #define __ARDUINO_DRIVER_ULTRASOUND_DISTANCE_SENSOR_CPP__ 1
 
 #include <UltrasoundDistanceSensor.h>
-#include <stdio.h>
 
 UltrasoundDistanceSensor::UltrasoundDistanceSensor(unsigned char echoPin, unsigned char trigPin) : echoPin(echoPin), trigPin(trigPin) {
     pinMode(echoPin, INPUT);
@@ -27,13 +26,8 @@ unsigned long UltrasoundDistanceSensor::getEchoTime() {
 }
 
 float UltrasoundDistanceSensor::getDistance() {
-    float d;
-    printf("distance sensor with pin: %d\n", trigPin);
-    scanf("%f", &d);
-    return d;
-    /*
     float time = (float) getEchoTime();
-    return time / US_SENSOR_2_TIMES_US_PER_CM; */
+    return time / US_SENSOR_2_TIMES_US_PER_CM;
 }
 
 #endif /* __ARDUINO_DRIVER_ULTRASOUND_DISTANCE_SENSOR_CPP__ */

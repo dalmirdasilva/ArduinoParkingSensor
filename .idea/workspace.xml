@@ -12,24 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c0ab1b7-0f47-41fd-875d-724df3090c24" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/dalmir.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TransitionListener.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TransitionListener.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TransitionNotifier.cpp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/TransitionNotifier.h" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/SensorManager.cpp" afterPath="$PROJECT_DIR$/StateMachine.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/SensorManager.h" afterPath="$PROJECT_DIR$/StateMachine.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Arduino.cpp" afterPath="$PROJECT_DIR$/Arduino.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ArduinoParkingSensor.iml" afterPath="$PROJECT_DIR$/.idea/ArduinoParkingSensor.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DistanceSensor.cpp" afterPath="$PROJECT_DIR$/DistanceSensor.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DistanceSensor.h" afterPath="$PROJECT_DIR$/DistanceSensor.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sensor.cpp" afterPath="$PROJECT_DIR$/Sensor.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sensor.h" afterPath="$PROJECT_DIR$/Sensor.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UltrasoundDistanceSensor.cpp" afterPath="$PROJECT_DIR$/UltrasoundDistanceSensor.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/UltrasoundDistanceSensor.h" afterPath="$PROJECT_DIR$/UltrasoundDistanceSensor.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ArduinoParkingSensor.iws" />
@@ -52,10 +39,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Sensor.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sensor.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.42203987">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UltrasoundDistanceSensor.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UltrasoundDistanceSensor.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UltrasoundDistanceSensor.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/UltrasoundDistanceSensor.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="StateMachine.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/StateMachine.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.12">
+            <state vertical-scroll-proportion="-15.68">
               <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding>
                 <element signature="e#106#142#0" expanded="true" />
@@ -77,45 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Sensor.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Sensor.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sensor.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28701594">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateMachine.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StateMachine.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.28">
-              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-              <folding>
-                <element signature="e#1#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StateTransitionListener.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/StateTransitionListener.h">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <caret line="4" column="61" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="61" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -127,7 +110,7 @@
         <entry file="file://$PROJECT_DIR$/DistanceSensor.h">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -143,21 +126,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arduino.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Arduino.h">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+              <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Arduino.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Arduino.cpp">
+      <file leaf-file-name="Makefile" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Makefile">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -176,23 +161,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Sensor.h" />
         <option value="$PROJECT_DIR$/Makefile" />
         <option value="$PROJECT_DIR$/TransitionListener.h" />
         <option value="$PROJECT_DIR$/TransitionNotifier.cpp" />
         <option value="$PROJECT_DIR$/TransitionNotifier.h" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/DistanceSensor.h" />
-        <option value="$PROJECT_DIR$/UltrasoundDistanceSensor.cpp" />
-        <option value="$PROJECT_DIR$/UltrasoundDistanceSensor.h" />
-        <option value="$PROJECT_DIR$/Sensor.cpp" />
         <option value="$PROJECT_DIR$/StateTransitionNotifier.h" />
         <option value="$PROJECT_DIR$/StateTransitionNotifier.cpp" />
         <option value="$PROJECT_DIR$/StateMachine.h" />
         <option value="$PROJECT_DIR$/StateMachine.cpp" />
-        <option value="$PROJECT_DIR$/DistanceSensor.cpp" />
         <option value="$PROJECT_DIR$/Arduino.cpp" />
+        <option value="$PROJECT_DIR$/UltrasoundDistanceSensor.cpp" />
+        <option value="$PROJECT_DIR$/UltrasoundDistanceSensor.h" />
+        <option value="$PROJECT_DIR$/DistanceSensor.cpp" />
+        <option value="$PROJECT_DIR$/DistanceSensor.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Sensor.h" />
+        <option value="$PROJECT_DIR$/Sensor.cpp" />
       </list>
     </option>
   </component>
@@ -425,7 +410,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Sensor.cpp</url>
-          <line>15</line>
+          <line>13</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
@@ -475,7 +460,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
-            <element signature="e#1#19#0" expanded="true" />
+            <element signature="e#1#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -549,7 +534,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
           <folding>
-            <element signature="e#1#19#0" expanded="true" />
+            <element signature="e#1#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -613,7 +598,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
-            <element signature="e#1#19#0" expanded="true" />
+            <element signature="e#1#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -650,14 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sensor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.16">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/stdio.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3989637">
@@ -666,34 +643,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Makefile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="8" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.6">
           <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UltrasoundDistanceSensor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="78" column="12" selection-start-line="78" selection-start-column="12" selection-end-line="78" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/UltrasoundDistanceSensor.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -734,22 +687,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DistanceSensor.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DistanceSensor.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Arduino.h">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -771,28 +708,50 @@
         <state vertical-scroll-proportion="-12.28">
           <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding>
-            <element signature="e#1#19#0" expanded="true" />
+            <element signature="e#1#19#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/Makefile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/StateMachine.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.12">
+        <state vertical-scroll-proportion="-15.68">
           <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
           <folding>
             <element signature="e#106#142#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UltrasoundDistanceSensor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="4" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DistanceSensor.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DistanceSensor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -807,13 +766,39 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/UltrasoundDistanceSensor.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sensor.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28701594">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="61" selection-start-line="4" selection-start-column="58" selection-end-line="4" selection-end-column="61" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="45" selection-start-line="34" selection-start-column="45" selection-end-line="34" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sensor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42203987">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
