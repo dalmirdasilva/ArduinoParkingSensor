@@ -1,7 +1,6 @@
 
-#include <stdio.h>
-#include <unistd.h>
 #include "StateMachine.h"
+#include <Arduino.h>
 
 StateMachine::StateMachine(Sensor **sensors, unsigned char *stateTable, unsigned char initialState) :
     StateTransitionNotifier(), stateTable(stateTable), sensors(sensors) {
@@ -14,6 +13,7 @@ void StateMachine::start() {
   unsigned char nextState;
   bool sunIsShining = true;
   while (sunIsShining) {
+    delay(100);
     for (i = 0; i < MAX_SENSORS; i++) {
       sensor = sensors[i];
       if (sensor->hasTransitioned()) {
@@ -25,9 +25,7 @@ void StateMachine::start() {
           state = nextState;
         }
       }
-      fflush(stdout);
     }
-    usleep(10000);
   }
 }
 

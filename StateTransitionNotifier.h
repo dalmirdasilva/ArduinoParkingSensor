@@ -11,7 +11,7 @@
 #ifndef __ARDUINO_PARKING_SENSOR_TRANSITION_NOTIFIER__
 #define __ARDUINO_PARKING_SENSOR_TRANSITION_NOTIFIER__ 1
 
-#include <Settings.h>
+#include "Settings.h"
 #include "StateTransitionListener.h"
 #include "Settings.h"
 
