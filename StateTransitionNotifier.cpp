@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "StateTransitionListener.h"
 #include "Settings.h"
 #include "StateTransitionNotifier.h"
@@ -18,7 +19,7 @@ StateTransitionNotifier::StateTransitionNotifier() {
 void StateTransitionNotifier::addStateTransitionListener(unsigned char fromState, unsigned char toState, StateTransitionListener *listener) {
   unsigned char i;
   for (i = 0; i < MAX_LISTENERS; i++) {
-    if (listeners[fromState % MAX_STATES][toState % MAX_STATES][i] != 0) {
+    if (listeners[fromState % MAX_STATES][toState % MAX_STATES][i] == 0) {
       listeners[fromState % MAX_STATES][toState % MAX_STATES][i] = listener;
       return;
     }
@@ -28,8 +29,10 @@ void StateTransitionNotifier::addStateTransitionListener(unsigned char fromState
 void StateTransitionNotifier::notifyStateTransition(unsigned char fromState, unsigned char toState) {
   unsigned char i;
   StateTransitionListener *listener;
-  for (i = 0; i < i; i++) {
+  for (i = 0; i < MAX_LISTENERS; i++) {
     listener = listeners[fromState % MAX_STATES][toState % MAX_STATES][i];
-    listener->eventReceived();
+    if (listener != 0) {
+      listener->eventReceived(fromState, toState);
+    }
   }
 }

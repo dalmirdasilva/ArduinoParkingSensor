@@ -11,6 +11,7 @@ SOURCES = \
   ./StateTransitionListener.cpp \
   ./StateTransitionNotifier.cpp \
   ./Arduino.cpp
+ARDUINO_LIB_PATH = /usr/share/arduino/libraries
 
 OBJECTS = $(SOURCES:.cpp=.o)
 MAIN = parking
@@ -29,6 +30,9 @@ $(MAIN): $(OBJECTS)
 clean:
 	find . -type f -name "*.o" -exec $(RM) {} \;
 	$(RM) $(MAIN)
+
+install:
+	cp -r ../ArduinoParkingSensor $(ARDUINO_LIB_PATH)
 
 depend: $(SRCS)
 	makedepend $(INCLUDES) $^

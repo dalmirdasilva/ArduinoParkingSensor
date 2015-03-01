@@ -12,25 +12,26 @@ void StateMachine::start() {
   unsigned char i, sensorEvent, sensorState;
   Sensor *sensor;
   unsigned char nextState;
-  while (true) {
+  bool sunIsShining = true;
+  while (sunIsShining) {
     for (i = 0; i < MAX_SENSORS; i++) {
       sensor = sensors[i];
       if (sensor->hasTransitioned()) {
         sensorState = sensor->getState();
-        sensorEvent = (sensorState == Sensor::ABSENT) ? Sensor::PASS_BY : Sensor::TURN_UP;
+        sensorEvent = (sensorState == Sensor::ABSENT) ? Sensor::LEAVE : Sensor::ARRIVE;
         nextState = computeNextState(i, sensorEvent);
-        printf("state: %x -> nextState: %x\n", state, nextState);
         if (nextState != UNDEFINED && state != nextState) {
-          printf("Notifying....\n");
           notifyStateTransition(state, nextState);
+          state = nextState;
         }
       }
+      fflush(stdout);
     }
     usleep(10000);
-    fflush(stdout);
   }
 }
 
 unsigned char StateMachine::computeNextState(unsigned char sensorIndex, unsigned char sensorEvent) {
-  return *(stateTable + (sensorIndex * sensorEvent + state));
+  unsigned int offset = (sensorIndex * MAX_EVENTS * MAX_STATES) + (sensorEvent * MAX_STATES) + state;
+  return *(stateTable + offset);
 }

@@ -10,7 +10,7 @@ void digitalWrite(unsigned char pin, unsigned char state) {
 void delayMicroseconds(int millis) {
 }
 
-int pulseIn(unsigned char pin, unsigned char state, int timeout) {
+unsigned long pulseIn(unsigned char pin, unsigned char state, int timeout) {
   int pulse = 0;
   scanf("%d", &pulse);
   printf("pin: %d, state: %d, timeout: %d\n", pin, state, timeout);
