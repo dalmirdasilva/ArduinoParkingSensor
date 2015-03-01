@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include "StateTransitionListener.h"
-#include "Settings.h"
-#include "StateTransitionNotifier.h"
+#include <StateTransitionListener.h>
+#include <Settings.h>
+#include <StateTransitionNotifier.h>
 
 StateTransitionListener *StateTransitionNotifier::listeners[MAX_STATES][MAX_STATES][MAX_LISTENERS] = {};
 

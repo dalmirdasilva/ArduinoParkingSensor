@@ -3,9 +3,13 @@
 #include <Sensor.h>
 #include <StateMachine.h>
 #include <UltrasoundDistanceSensor.h>
-#include <ArduinoLedMatrix>
 #include <Arduino.h>
 
+#include <string.h>
+
+#include <MAX7219Driver.h>
+#include <LedMatrixDriver.h>
+#include <LedMatrixMAX7219Driver.h>
 
 #define SENSOR0_TRIG_PIN  A0
 #define SENSOR0_ECHO_PIN  A1
@@ -19,51 +23,97 @@
 #define SENSOR1_MAX_DISTANCE  400.0
 #define SENSOR1_THRESHOLD     4.0
 
-class EventHandler : public StateTransitionListener {
+#define LED_MATRIX_WIDTH      8
+#define LED_MATRIX_HEIGHT     8
+
+#define LED_MATRIX_DATA_PIN   10
+#define LED_MATRIX_CLOCK_PIN  11
+#define LED_MATRIX_LOAD_PIN   12
+
+unsigned char parkingCounter = 0;
+
+class LedMatrixWriter {
 
 public:
+
+  LedMatrixMAX7219Driver *ledMatrixDriver;
+
+  LedMatrixWriter(LedMatrixMAX7219Driver *ledMatrixDriver) : ledMatrixDriver(ledMatrixDriver) {
+  }
+};
+
+class EventHandler : public StateTransitionListener, public LedMatrixWriter {
+
+public:
+
+  EventHandler(LedMatrixMAX7219Driver *matrix) : LedMatrixWriter(matrix) {
+  }
+
   virtual void eventReceived(unsigned char fromState, unsigned char toState) {
     Serial.print("State transitioned from ");
     Serial.print(fromState, HEX);
     Serial.print(" to ");
     Serial.println(toState, HEX);
+    ledMatrixDriver->setCol(0, toState);
   }
 };
 
-class LeaveHandler : public StateTransitionListener {
+class LeaveHandler : public StateTransitionListener, public LedMatrixWriter {
 
 public:
+
+  LeaveHandler(LedMatrixMAX7219Driver *matrix) : LedMatrixWriter(matrix) {
+  }
+
   virtual void eventReceived(unsigned char fromState, unsigned char toState) {
-    Serial.println("Saiu");
+    if (parkingCounter > 0) {
+      parkingCounter--;
+    }
+    Serial.println("Leaved.");
+    ledMatrixDriver->setCol(7, parkingCounter);
   }
 };
 
-class ArriveHandler : public StateTransitionListener {
+class ArriveHandler : public StateTransitionListener, public LedMatrixWriter {
 
 public:
+
+  ArriveHandler(LedMatrixMAX7219Driver *matrix) : LedMatrixWriter(matrix) {
+  }
+
   virtual void eventReceived(unsigned char fromState, unsigned char toState) {
-    Serial.println("Entrou");
+    if (parkingCounter < 0xff) {
+      parkingCounter++;
+    }
+    Serial.println("Arrived.");
+    ledMatrixDriver->setCol(7, parkingCounter);
   }
 };
 
 void setup() {
 
   Serial.begin(9600);
-  Serial.println("Initializing.");
+  Serial.println("Initializing...");
 
-  ArriveHandler arriveHandler;
-  LeaveHandler leaveHandler;
-  EventHandler eventHandler;
+  MAX7219Driver driver(LED_MATRIX_DATA_PIN, LED_MATRIX_CLOCK_PIN, LED_MATRIX_LOAD_PIN);
+  LedMatrixMAX7219Driver matrix(&driver, LED_MATRIX_WIDTH, LED_MATRIX_HEIGHT);
+
+  ArriveHandler arriveHandler(&matrix);
+  LeaveHandler leaveHandler(&matrix);
+  EventHandler eventHandler(&matrix);
 
   Sensor *sensors[MAX_SENSORS];
-
-  unsigned char i, j, stateTable[MAX_SENSORS][MAX_EVENTS][MAX_STATES] = {StateMachine::UNDEFINED};
 
   UltrasoundDistanceSensor distanceSensor0(SENSOR0_ECHO_PIN, SENSOR0_TRIG_PIN);
   UltrasoundDistanceSensor distanceSensor1(SENSOR1_ECHO_PIN, SENSOR1_TRIG_PIN);
 
   Sensor sensor0(&distanceSensor0, SENSOR0_THRESHOLD, SENSOR0_MIN_DISTANCE, SENSOR0_MAX_DISTANCE);
   Sensor sensor1(&distanceSensor1, SENSOR1_THRESHOLD, SENSOR1_MIN_DISTANCE, SENSOR1_MAX_DISTANCE);
+
+  unsigned char i, j, stateTable[MAX_SENSORS][MAX_EVENTS][MAX_STATES];
+  memset(stateTable, StateMachine::UNDEFINED, sizeof(stateTable));
+
+  matrix.clear();
 
   sensors[0] = &sensor0;
   sensors[1] = &sensor1;
@@ -93,7 +143,7 @@ void setup() {
 
   for (i = 0; i < MAX_STATES; i++) {
     for (j = 0; j < MAX_STATES; j++) {
-      //stateMachine.addStateTransitionListener((StateMachine::State)i, (StateMachine::State)j, &eventHandler);
+      stateMachine.addStateTransitionListener((StateMachine::State)i, (StateMachine::State)j, &eventHandler);
     }
   }
 
@@ -101,9 +151,12 @@ void setup() {
   stateMachine.start();
 }
 
-void loop() {}
+void loop() {
+
+}
 
 int main(void) {
+
   init();
 
 #if defined(USBCON)

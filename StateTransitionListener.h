@@ -15,6 +15,8 @@ class StateTransitionListener {
     
 public:
 
+  virtual ~StateTransitionListener();
+
   /**
    * Event received.
    */

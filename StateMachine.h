@@ -11,8 +11,10 @@
 #ifndef __ARDUINO_PARKING_SENSOR_STATE_MACHINE_H__
 #define __ARDUINO_PARKING_SENSOR_STATE_MACHINE_H__ 1
 
-#include "StateTransitionNotifier.h"
-#include "Sensor.h"
+#include <StateTransitionNotifier.h>
+#include <Sensor.h>
+
+#define MAX_EVENTS_TIMES_MAX_STATES     MAX_EVENTS * MAX_STATES
 
 class StateMachine : public StateTransitionNotifier {
 

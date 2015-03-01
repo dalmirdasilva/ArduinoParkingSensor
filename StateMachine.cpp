@@ -30,6 +30,6 @@ void StateMachine::start() {
 }
 
 unsigned char StateMachine::computeNextState(unsigned char sensorIndex, unsigned char sensorEvent) {
-  unsigned int offset = (sensorIndex * MAX_EVENTS * MAX_STATES) + (sensorEvent * MAX_STATES) + state;
+  unsigned int offset = (sensorIndex * MAX_EVENTS_TIMES_MAX_STATES) + (sensorEvent * MAX_STATES) + state;
   return *(stateTable + offset);
 }
