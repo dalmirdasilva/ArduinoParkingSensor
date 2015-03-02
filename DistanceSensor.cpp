@@ -13,4 +13,7 @@
 
 #include "DistanceSensor.h"
 
+DistanceSensor::~DistanceSensor() {
+}
+
 #endif /* __ARDUINO_DRIVER_DISTANCE_SENSOR_CPP__ */

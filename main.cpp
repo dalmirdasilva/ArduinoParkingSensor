@@ -16,12 +16,12 @@
 #define SENSOR1_TRIG_PIN  A2
 #define SENSOR1_ECHO_PIN  A3
 
-#define SENSOR0_MIN_DISTANCE  1.0
+#define SENSOR0_MIN_DISTANCE  0.0
 #define SENSOR0_MAX_DISTANCE  400.0
-#define SENSOR0_THRESHOLD     4.0
-#define SENSOR1_MIN_DISTANCE  1.0
+#define SENSOR0_THRESHOLD     10.0
+#define SENSOR1_MIN_DISTANCE  0.0
 #define SENSOR1_MAX_DISTANCE  400.0
-#define SENSOR1_THRESHOLD     4.0
+#define SENSOR1_THRESHOLD     10.0
 
 #define LED_MATRIX_WIDTH      8
 #define LED_MATRIX_HEIGHT     8
@@ -34,11 +34,15 @@ unsigned char parkingCounter = 0;
 
 class LedMatrixWriter {
 
+  LedMatrixMAX7219Driver *matrix;
+
 public:
 
-  LedMatrixMAX7219Driver *ledMatrixDriver;
+  LedMatrixWriter(LedMatrixMAX7219Driver *matrix) : matrix(matrix) {
+  }
 
-  LedMatrixWriter(LedMatrixMAX7219Driver *ledMatrixDriver) : ledMatrixDriver(ledMatrixDriver) {
+  LedMatrixMAX7219Driver *getMatrix() {
+    return matrix;
   }
 };
 
@@ -54,7 +58,7 @@ public:
     Serial.print(fromState, HEX);
     Serial.print(" to ");
     Serial.println(toState, HEX);
-    ledMatrixDriver->setCol(0, toState);
+    getMatrix()->setCol(0, toState);
   }
 };
 
@@ -70,7 +74,7 @@ public:
       parkingCounter--;
     }
     Serial.println("Leaved.");
-    ledMatrixDriver->setCol(7, parkingCounter);
+    getMatrix()->setCol(7, parkingCounter);
   }
 };
 
@@ -86,14 +90,14 @@ public:
       parkingCounter++;
     }
     Serial.println("Arrived.");
-    ledMatrixDriver->setCol(7, parkingCounter);
+    getMatrix()->setCol(7, parkingCounter);
   }
 };
 
 void setup() {
 
   Serial.begin(9600);
-  Serial.println("Initializing...");
+  Serial.print("Initializing...");
 
   MAX7219Driver driver(LED_MATRIX_DATA_PIN, LED_MATRIX_CLOCK_PIN, LED_MATRIX_LOAD_PIN);
   LedMatrixMAX7219Driver matrix(&driver, LED_MATRIX_WIDTH, LED_MATRIX_HEIGHT);
@@ -112,8 +116,6 @@ void setup() {
 
   unsigned char i, j, stateTable[MAX_SENSORS][MAX_EVENTS][MAX_STATES];
   memset(stateTable, StateMachine::UNDEFINED, sizeof(stateTable));
-
-  matrix.clear();
 
   sensors[0] = &sensor0;
   sensors[1] = &sensor1;
@@ -138,16 +140,18 @@ void setup() {
 
   StateMachine stateMachine(&sensors[0], &stateTable[0][0][0], StateMachine::IDLE);
 
-  stateMachine.addStateTransitionListener(StateMachine::ARRIVE2, StateMachine::IDLE, &arriveHandler);
-  stateMachine.addStateTransitionListener(StateMachine::LEAVE2, StateMachine::IDLE, &leaveHandler);
-
   for (i = 0; i < MAX_STATES; i++) {
     for (j = 0; j < MAX_STATES; j++) {
       stateMachine.addStateTransitionListener((StateMachine::State)i, (StateMachine::State)j, &eventHandler);
     }
   }
 
-  Serial.println("Done. Starting machine state...");
+  stateMachine.addStateTransitionListener(StateMachine::ARRIVE2, StateMachine::IDLE, &arriveHandler);
+  stateMachine.addStateTransitionListener(StateMachine::LEAVE2, StateMachine::IDLE, &leaveHandler);
+
+  Serial.println("done. \nStarting machine state...");
+
+  matrix.clear();
   stateMachine.start();
 }
 

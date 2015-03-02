@@ -14,6 +14,8 @@
 class DistanceSensor {
 public:
 
+    virtual ~DistanceSensor();
+
     /**
      * Gets the distance o the device from whatever is in front of it.
      * 

@@ -13,7 +13,7 @@ void StateMachine::start() {
   unsigned char nextState;
   bool sunIsShining = true;
   while (sunIsShining) {
-    delay(100);
+    delay(MIN_SOUND_DISSIPATION_TIME_MILLIS);
     for (i = 0; i < MAX_SENSORS; i++) {
       sensor = sensors[i];
       if (sensor->hasTransitioned()) {

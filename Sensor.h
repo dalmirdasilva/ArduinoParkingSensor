@@ -77,7 +77,7 @@ public:
   /**
    * Reads the sensor and determine if the state has changed or not. Also sets the new state.
    *
-   * @return  bool        If or not the state was transitioned.
+   * @return  boolean     If or not the state was transitioned.
    */
   bool hasTransitioned();
 

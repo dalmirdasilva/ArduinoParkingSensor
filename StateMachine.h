@@ -14,7 +14,8 @@
 #include <StateTransitionNotifier.h>
 #include <Sensor.h>
 
-#define MAX_EVENTS_TIMES_MAX_STATES     MAX_EVENTS * MAX_STATES
+#define MAX_EVENTS_TIMES_MAX_STATES         MAX_EVENTS * MAX_STATES
+#define MIN_SOUND_DISSIPATION_TIME_MILLIS   120
 
 class StateMachine : public StateTransitionNotifier {
 
