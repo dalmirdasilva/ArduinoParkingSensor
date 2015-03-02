@@ -46,39 +46,39 @@
 class UltrasoundDistanceSensor : public DistanceSensor {
 private:
 
-    /**
-     * The echo pin.
-     */
-    unsigned char echoPin;
+  /**
+   * The echo pin.
+   */
+  unsigned char echoPin;
 
-    /**
-     * The trig pin.
-     */
-    unsigned char trigPin;
+  /**
+   * The trig pin.
+   */
+  unsigned char trigPin;
 
 public:
 
-    /**
-     * Public constructor.
-     * 
-     * @param echoPin   The echo pin.
-     * @param trigPin   The trigger pin.
-     */
-    UltrasoundDistanceSensor(unsigned char echoPin, unsigned char trigPin);
+  /**
+   * Public constructor.
+   *
+   * @param echoPin   The echo pin.
+   * @param trigPin   The trigger pin.
+   */
+  UltrasoundDistanceSensor(unsigned char echoPin, unsigned char trigPin);
 
-    /**
-     * Gets the time between the send and reice the sound.
-     * 
-     * @return   The time between the send and reice the sound.
-     */
-    unsigned long getEchoTime();
+  /**
+   * Gets the time between the send and reice the sound.
+   *
+   * @return   The time between the send and reice the sound.
+   */
+  unsigned long getEchoTime();
 
-    /**
-     * Gets the distance o the device from whatever is in front of it.
-     * 
-     * @return   The distance in centimeters.
-     */
-    float getDistance();
+  /**
+   * Gets the distance o the device from whatever is in front of it.
+   *
+   * @return   The distance in centimeters.
+   */
+  float getDistance();
 };
 
 #endif /* __ARDUINO_DRIVER_ULTRASOUND_DISTANCE_SENSOR_H__ */

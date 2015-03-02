@@ -1,4 +1,3 @@
-
 #include "StateMachine.h"
 #include <Arduino.h>
 

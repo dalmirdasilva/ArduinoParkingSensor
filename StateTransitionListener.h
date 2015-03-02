@@ -12,7 +12,7 @@
 #define __ARDUINO_PARKING_SENSOR_TRANSITION_LISTENER__ 1
 
 class StateTransitionListener {
-    
+
 public:
 
   virtual ~StateTransitionListener();

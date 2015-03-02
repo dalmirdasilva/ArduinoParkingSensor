@@ -38,7 +38,8 @@ class LedMatrixWriter {
 
 public:
 
-  LedMatrixWriter(LedMatrixMAX7219Driver *matrix) : matrix(matrix) {
+  LedMatrixWriter(LedMatrixMAX7219Driver *matrix) :
+      matrix(matrix) {
   }
 
   LedMatrixMAX7219Driver *getMatrix() {
@@ -50,7 +51,8 @@ class EventHandler : public StateTransitionListener, public LedMatrixWriter {
 
 public:
 
-  EventHandler(LedMatrixMAX7219Driver *matrix) : LedMatrixWriter(matrix) {
+  EventHandler(LedMatrixMAX7219Driver *matrix) :
+      LedMatrixWriter(matrix) {
   }
 
   virtual void eventReceived(unsigned char fromState, unsigned char toState) {
@@ -66,7 +68,8 @@ class LeaveHandler : public StateTransitionListener, public LedMatrixWriter {
 
 public:
 
-  LeaveHandler(LedMatrixMAX7219Driver *matrix) : LedMatrixWriter(matrix) {
+  LeaveHandler(LedMatrixMAX7219Driver *matrix) :
+      LedMatrixWriter(matrix) {
   }
 
   virtual void eventReceived(unsigned char fromState, unsigned char toState) {
@@ -82,7 +85,8 @@ class ArriveHandler : public StateTransitionListener, public LedMatrixWriter {
 
 public:
 
-  ArriveHandler(LedMatrixMAX7219Driver *matrix) : LedMatrixWriter(matrix) {
+  ArriveHandler(LedMatrixMAX7219Driver *matrix) :
+      LedMatrixWriter(matrix) {
   }
 
   virtual void eventReceived(unsigned char fromState, unsigned char toState) {
@@ -142,7 +146,7 @@ void setup() {
 
   for (i = 0; i < MAX_STATES; i++) {
     for (j = 0; j < MAX_STATES; j++) {
-      stateMachine.addStateTransitionListener((StateMachine::State)i, (StateMachine::State)j, &eventHandler);
+      stateMachine.addStateTransitionListener((StateMachine::State) i, (StateMachine::State) j, &eventHandler);
     }
   }
 

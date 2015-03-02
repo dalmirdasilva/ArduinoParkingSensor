@@ -14,14 +14,14 @@
 class DistanceSensor {
 public:
 
-    virtual ~DistanceSensor();
+  virtual ~DistanceSensor();
 
-    /**
-     * Gets the distance o the device from whatever is in front of it.
-     * 
-     * @retun   The distance in centimeters.
-     */
-    virtual float getDistance() = 0;
+  /**
+   * Gets the distance o the device from whatever is in front of it.
+   *
+   * @retun   The distance in centimeters.
+   */
+  virtual float getDistance() = 0;
 };
 
 #endif /* __ARDUINO_DRIVER_DISTANCE_SENSOR_H__ */
