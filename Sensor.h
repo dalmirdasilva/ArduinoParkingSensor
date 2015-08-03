@@ -28,16 +28,6 @@ public:
   };
 
   /**
-   * Sensor event.
-   * Every time a sensor transitioned its state, an event was happened. If it was transitioned and the current state
-   * is ABSENT the event will be LEAVE, if the current state is PRESENT, the event is ARRIVE.
-   */
-  enum Event {
-    LEAVE = 0x00,
-    ARRIVE = 0x01
-  };
-
-  /**
    * Underling sensor driver.
    */
   DistanceSensor *sensor;
