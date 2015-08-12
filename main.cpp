@@ -13,6 +13,7 @@
 
 #define SENSOR0_TRIG_PIN  A0
 #define SENSOR0_ECHO_PIN  A1
+
 #define SENSOR1_TRIG_PIN  A2
 #define SENSOR1_ECHO_PIN  A3
 

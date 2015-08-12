@@ -19,7 +19,7 @@ public:
   /**
    * Gets the distance o the device from whatever is in front of it.
    *
-   * @retun   The distance in centimeters.
+   * @return   The distance in centimeters.
    */
   virtual float getDistance() = 0;
 };
