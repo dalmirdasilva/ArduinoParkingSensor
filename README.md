@@ -10,7 +10,6 @@ The Ultrasonic Sensor are attached to the pins:
 
 - SENSOR0_TRIG_PIN  A0
 - SENSOR0_ECHO_PIN  A1
-
 - SENSOR1_TRIG_PIN  A2
 - SENSOR1_ECHO_PIN  A3
 
