@@ -8,6 +8,7 @@
 #include <string.h>
 
 #include <MAX7219Driver.h>
+
 #include <LedMatrixDriver.h>
 #include <LedMatrixMAX7219Driver.h>
 
