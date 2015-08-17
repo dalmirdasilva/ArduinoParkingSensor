@@ -1,5 +1,7 @@
 # ArduinoParkingSensor
 
+[Documentation.pdf](Documentation.pdf)
+
 ## Objective
 
 Detect when a car arrives or leaves the parking lot.
