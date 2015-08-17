@@ -9,6 +9,8 @@ MAIN = parking
 
 .PHONY: depend clean
 
+doc:
+
 all: $(MAIN)
 	@echo  Arduino Parking Sensor
 
