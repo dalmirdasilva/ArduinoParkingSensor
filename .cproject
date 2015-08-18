@@ -60,8 +60,8 @@
 								</option>
 								<option id="de.innot.avreclipse.cpplinker.option.libs.1080586954" name="Libraries (-l)" superClass="de.innot.avreclipse.cpplinker.option.libs" valueType="libs">
 									<listOptionValue builtIn="false" value="ArduinoLedMatrixDriver"/>
-									<listOptionValue builtIn="false" value="ArduinoCore"/>
 									<listOptionValue builtIn="false" value="ArduinoDistanceDriver"/>
+									<listOptionValue builtIn="false" value="ArduinoCore"/>
 								</option>
 								<option id="de.innot.avreclipse.cpplinker.option.otherobjs.379210569" name="Other Objects (*.o)" superClass="de.innot.avreclipse.cpplinker.option.otherobjs" valueType="userObjs">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/ArduinoCore/Release/wiring_pulse.o}&quot;"/>
