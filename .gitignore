@@ -1,7 +1,25 @@
+# Compiled Object files
+*.slo
+*.lo
 *.o
-parking
-UltrasoundDistanceSensor.cpp 
-UltrasoundDistanceSensor.h 
-DistanceSensor.cpp 
-DistanceSensor.h
-/Release/
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+Release/*
+Debug/*
+
