@@ -11,7 +11,7 @@
 #ifndef __ARDUINO_PARKING_SENSOR_SENSOR_H__
 #define __ARDUINO_PARKING_SENSOR_SENSOR_H__ 1
 
-#include "DistanceSensor.h"
+#include <DistanceSensor.h>
 
 class Sensor {
 
